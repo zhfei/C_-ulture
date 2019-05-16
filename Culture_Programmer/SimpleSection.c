@@ -6,7 +6,7 @@
 //  Copyright © 2019年 zhf. All rights reserved.
 //
 
-#include "SimpleSection.h"
+#include <stdio.h>
 
 int printf(const char *format,...);
 
