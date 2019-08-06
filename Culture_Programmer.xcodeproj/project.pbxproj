@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		912B427D22F9CD4B003A0D1D /* ffiFunction.c in Sources */ = {isa = PBXBuildFile; fileRef = 912B427C22F9CD4B003A0D1D /* ffiFunction.c */; };
 		9181F47122ACEFA200E9C3B7 /* TinyHelloWorld.c in Sources */ = {isa = PBXBuildFile; fileRef = 9181F47022ACEFA200E9C3B7 /* TinyHelloWorld.c */; };
 		919A48A4228DB0C0009436D9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 919A48A3228DB0C0009436D9 /* main.c */; };
 		919A48AB228DB192009436D9 /* SimpleSection.c in Sources */ = {isa = PBXBuildFile; fileRef = 919A48AA228DB192009436D9 /* SimpleSection.c */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		912B427B22F9CD4B003A0D1D /* ffiFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ffiFunction.h; sourceTree = "<group>"; };
+		912B427C22F9CD4B003A0D1D /* ffiFunction.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ffiFunction.c; sourceTree = "<group>"; };
 		9181F47022ACEFA200E9C3B7 /* TinyHelloWorld.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = TinyHelloWorld.c; sourceTree = "<group>"; };
 		919A48A0228DB0C0009436D9 /* Culture_Programmer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Culture_Programmer; sourceTree = BUILT_PRODUCTS_DIR; };
 		919A48A3228DB0C0009436D9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
@@ -64,6 +67,8 @@
 				919A48A3228DB0C0009436D9 /* main.c */,
 				919A48AA228DB192009436D9 /* SimpleSection.c */,
 				9181F47022ACEFA200E9C3B7 /* TinyHelloWorld.c */,
+				912B427B22F9CD4B003A0D1D /* ffiFunction.h */,
+				912B427C22F9CD4B003A0D1D /* ffiFunction.c */,
 			);
 			path = Culture_Programmer;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9181F47122ACEFA200E9C3B7 /* TinyHelloWorld.c in Sources */,
+				912B427D22F9CD4B003A0D1D /* ffiFunction.c in Sources */,
 				919A48A4228DB0C0009436D9 /* main.c in Sources */,
 				919A48AB228DB192009436D9 /* SimpleSection.c in Sources */,
 			);
