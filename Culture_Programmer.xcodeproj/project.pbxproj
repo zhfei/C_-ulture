@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		912B427D22F9CD4B003A0D1D /* ffiFunction.c in Sources */ = {isa = PBXBuildFile; fileRef = 912B427C22F9CD4B003A0D1D /* ffiFunction.c */; };
+		9165FE09231EC42C0028856D /* AppBuildProcess.c in Sources */ = {isa = PBXBuildFile; fileRef = 9165FE08231EC42C0028856D /* AppBuildProcess.c */; };
 		9181F47122ACEFA200E9C3B7 /* TinyHelloWorld.c in Sources */ = {isa = PBXBuildFile; fileRef = 9181F47022ACEFA200E9C3B7 /* TinyHelloWorld.c */; };
 		919A48A4228DB0C0009436D9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 919A48A3228DB0C0009436D9 /* main.c */; };
 		919A48AB228DB192009436D9 /* SimpleSection.c in Sources */ = {isa = PBXBuildFile; fileRef = 919A48AA228DB192009436D9 /* SimpleSection.c */; };
@@ -28,6 +29,8 @@
 /* Begin PBXFileReference section */
 		912B427B22F9CD4B003A0D1D /* ffiFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ffiFunction.h; sourceTree = "<group>"; };
 		912B427C22F9CD4B003A0D1D /* ffiFunction.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ffiFunction.c; sourceTree = "<group>"; };
+		9165FE07231EC42C0028856D /* AppBuildProcess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppBuildProcess.h; sourceTree = "<group>"; };
+		9165FE08231EC42C0028856D /* AppBuildProcess.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = AppBuildProcess.c; sourceTree = "<group>"; };
 		9181F47022ACEFA200E9C3B7 /* TinyHelloWorld.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = TinyHelloWorld.c; sourceTree = "<group>"; };
 		919A48A0228DB0C0009436D9 /* Culture_Programmer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Culture_Programmer; sourceTree = BUILT_PRODUCTS_DIR; };
 		919A48A3228DB0C0009436D9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
@@ -45,9 +48,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9165FE06231EC3E80028856D /* 项目构建过程 */ = {
+			isa = PBXGroup;
+			children = (
+				9165FE07231EC42C0028856D /* AppBuildProcess.h */,
+				9165FE08231EC42C0028856D /* AppBuildProcess.c */,
+			);
+			path = "项目构建过程";
+			sourceTree = "<group>";
+		};
 		919A4897228DB0C0009436D9 = {
 			isa = PBXGroup;
 			children = (
+				9165FE06231EC3E80028856D /* 项目构建过程 */,
 				919A48A2228DB0C0009436D9 /* Culture_Programmer */,
 				919A48A1228DB0C0009436D9 /* Products */,
 			);
@@ -131,6 +144,7 @@
 			files = (
 				9181F47122ACEFA200E9C3B7 /* TinyHelloWorld.c in Sources */,
 				912B427D22F9CD4B003A0D1D /* ffiFunction.c in Sources */,
+				9165FE09231EC42C0028856D /* AppBuildProcess.c in Sources */,
 				919A48A4228DB0C0009436D9 /* main.c in Sources */,
 				919A48AB228DB192009436D9 /* SimpleSection.c in Sources */,
 			);
