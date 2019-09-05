@@ -69,6 +69,16 @@
  otool -v -h a.out
  */
 
+/*
+ 加载命令规定了文件的逻辑结构和文件在虚拟内存中的布局
+ otool -v -l a.out | open -f
+ */
+
+/*
+ 看看在可执行文件中，动态链接库是如何使用的
+ otool -v -L a.out
+ */
+
 
 
 #ifndef AppBuildProcess_h

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		912B427D22F9CD4B003A0D1D /* ffiFunction.c in Sources */ = {isa = PBXBuildFile; fileRef = 912B427C22F9CD4B003A0D1D /* ffiFunction.c */; };
+		913995672321642900BD822D /* Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = 913995662321642900BD822D /* Foo.m */; };
+		9139956A2321648C00BD822D /* HelloWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 913995692321648C00BD822D /* HelloWorld.m */; };
 		9165FE09231EC42C0028856D /* AppBuildProcess.c in Sources */ = {isa = PBXBuildFile; fileRef = 9165FE08231EC42C0028856D /* AppBuildProcess.c */; };
 		9181F47122ACEFA200E9C3B7 /* TinyHelloWorld.c in Sources */ = {isa = PBXBuildFile; fileRef = 9181F47022ACEFA200E9C3B7 /* TinyHelloWorld.c */; };
 		919A48A4228DB0C0009436D9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 919A48A3228DB0C0009436D9 /* main.c */; };
@@ -29,6 +31,10 @@
 /* Begin PBXFileReference section */
 		912B427B22F9CD4B003A0D1D /* ffiFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ffiFunction.h; sourceTree = "<group>"; };
 		912B427C22F9CD4B003A0D1D /* ffiFunction.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ffiFunction.c; sourceTree = "<group>"; };
+		913995652321642900BD822D /* Foo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
+		913995662321642900BD822D /* Foo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
+		913995682321648C00BD822D /* HelloWorld.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorld.h; sourceTree = "<group>"; };
+		913995692321648C00BD822D /* HelloWorld.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorld.m; sourceTree = "<group>"; };
 		9165FE07231EC42C0028856D /* AppBuildProcess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppBuildProcess.h; sourceTree = "<group>"; };
 		9165FE08231EC42C0028856D /* AppBuildProcess.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = AppBuildProcess.c; sourceTree = "<group>"; };
 		9181F47022ACEFA200E9C3B7 /* TinyHelloWorld.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = TinyHelloWorld.c; sourceTree = "<group>"; };
@@ -48,9 +54,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		913995642321640100BD822D /* 多类编译 */ = {
+			isa = PBXGroup;
+			children = (
+				913995652321642900BD822D /* Foo.h */,
+				913995662321642900BD822D /* Foo.m */,
+				913995682321648C00BD822D /* HelloWorld.h */,
+				913995692321648C00BD822D /* HelloWorld.m */,
+			);
+			path = "多类编译";
+			sourceTree = "<group>";
+		};
 		9165FE06231EC3E80028856D /* 项目构建过程 */ = {
 			isa = PBXGroup;
 			children = (
+				913995642321640100BD822D /* 多类编译 */,
 				9165FE07231EC42C0028856D /* AppBuildProcess.h */,
 				9165FE08231EC42C0028856D /* AppBuildProcess.c */,
 			);
@@ -142,11 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913995672321642900BD822D /* Foo.m in Sources */,
 				9181F47122ACEFA200E9C3B7 /* TinyHelloWorld.c in Sources */,
 				912B427D22F9CD4B003A0D1D /* ffiFunction.c in Sources */,
 				9165FE09231EC42C0028856D /* AppBuildProcess.c in Sources */,
 				919A48A4228DB0C0009436D9 /* main.c in Sources */,
 				919A48AB228DB192009436D9 /* SimpleSection.c in Sources */,
+				9139956A2321648C00BD822D /* HelloWorld.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
