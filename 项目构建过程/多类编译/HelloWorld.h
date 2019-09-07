@@ -18,7 +18,6 @@
 /*
  将这两个目标文件和 Foundation framework 链接，生成一个可执行文件
  xcrun clang helloworld.o Foo.o -Wl,`xcrun --show-sdk-path`/System/Library/Frameworks/Foundation.framework/Foundation
- 
  */
 
 //-----------------------观察符号表----------------------------
@@ -46,6 +45,7 @@
 /*
   查看Foundation 依赖于另外一些动态库
   xcrun otool -L `xcrun --show-sdk-path`/System/Library/Frameworks/Foundation.framework/Foundation
+ 
  */
 
 #import <Foundation/Foundation.h>
