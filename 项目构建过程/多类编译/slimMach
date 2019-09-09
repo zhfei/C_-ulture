@@ -1,0 +1,30 @@
+Mach-o文件中
+1.__DATA __objc_classrefs段记录了引用类的地址，
+2.__DATA __objc_classlist段记录了所有类的地址，
+3.取差集可以得到未使用的类的地址，
+4.然后进行符号化，
+就可以得到未被引用的类信息。
+
+
+通过file命令获取到arch,在取类地址的时候区分x86_64和arm.
+不同的架构，在分析地址时，规则是不同的。
+def pointers_from_binary(line, binary_file_arch):
+    line = line[16:].strip().split(' ')
+    pointers = set()
+    if binary_file_arch == 'x86_64':
+        #untreated line example:00000001030cec80	d8 75 15 03 01 00 00 00 68 77 15 03 01 00 00 00
+        pointers.add(''.join(line[4:8][::-1] + line[0:4][::-1]))
+        pointers.add(''.join(line[12:16][::-1] + line[8:12][::-1]))
+        return pointers
+    #arm64 confirmed,armv7 arm7s unconfirmed
+    if binary_file_arch.startswith('arm'):
+        #untreated line example:00000001030bcd20	03138580 00000001 03138878 00000001
+        pointers.add(line[1] + line[0])
+        pointers.add(line[3] + line[2])
+        return pointers
+    return None
+
+
+通过nm -nm命令可以得到地址和对应的类名字。
+
+如果一个类的子类被实例化，父类未被实例化，此时父类不会出现在__objc_classrefs这个段里，在未使用的类中需要将这一部分父类过滤出去。使用otool -oV可以获取到类的继承关系

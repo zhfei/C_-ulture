@@ -41,6 +41,7 @@
 		919A48A0228DB0C0009436D9 /* Culture_Programmer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Culture_Programmer; sourceTree = BUILT_PRODUCTS_DIR; };
 		919A48A3228DB0C0009436D9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		919A48AA228DB192009436D9 /* SimpleSection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SimpleSection.c; sourceTree = "<group>"; };
+		91E8187823266ED900BFDDD4 /* slimMach */ = {isa = PBXFileReference; lastKnownFileType = text; name = slimMach; path = "多类编译/slimMach"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 				913995642321640100BD822D /* 多类编译 */,
 				9165FE07231EC42C0028856D /* AppBuildProcess.h */,
 				9165FE08231EC42C0028856D /* AppBuildProcess.c */,
+				91E8187823266ED900BFDDD4 /* slimMach */,
 			);
 			path = "项目构建过程";
 			sourceTree = "<group>";
