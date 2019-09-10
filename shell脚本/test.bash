@@ -100,3 +100,63 @@ done
 两个变量是否相等：[[ $var1 = $var2 ]]
 EOF
 
+
+#--------------第四课：运算符表达式---------
+
+#算术运算符
+#expr是一款表达式计算工具，可以完成表达式的求值
+val=`expr 2 + 2`
+echo "两个数的和为："$val
+
+a=20
+b=30
+echo "加："$((`expr ${a} + ${b}`))
+echo "减："$((`expr ${a} - ${b}`))
+echo "乘："$((`expr ${a} \* ${b}`))
+echo "除："$((`expr ${a} / ${b}`))
+a=$b
+[ a == b ]
+[ a != b ]
+
+#关系运算符
+:<<EOF
+-eq 相等
+-ne 不相等
+-gt 大于
+-lt 小于
+-ge 大于等于
+-le 小于等于
+EOF
+
+a=20
+b=30
+if [[ a -eq b ]]; then
+	echo "a 相等 b"
+elif [[ a -gt b ]]; then
+	echo "a 大于 b"
+else
+	echo "其他情况"
+fi
+
+#布尔运算符
+:<<EOF
+!  非运算
+-o 或运算
+-a 与运算
+EOF
+
+if [ $a -gt $b -o $b -lt 100 ]; then
+	echo "a 大于 b  或者 a 小于 b"
+fi
+
+#逻辑运算符
+:<<EOF
+&& 逻辑的AND
+|| 逻辑的OR
+EOF
+
+if [[ $a -lt 100 || $b -gt 10 ]]; then
+	echo "逻辑运算 成功"
+fi
+
+
