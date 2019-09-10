@@ -42,6 +42,7 @@
 		919A48A3228DB0C0009436D9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		919A48AA228DB192009436D9 /* SimpleSection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SimpleSection.c; sourceTree = "<group>"; };
 		91E8187823266ED900BFDDD4 /* slimMach */ = {isa = PBXFileReference; lastKnownFileType = text; name = slimMach; path = "多类编译/slimMach"; sourceTree = "<group>"; };
+		91E8187A2327B99200BFDDD4 /* test.bash */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test.bash; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +81,7 @@
 		919A4897228DB0C0009436D9 = {
 			isa = PBXGroup;
 			children = (
+				91E818792327B97300BFDDD4 /* shell脚本 */,
 				9165FE06231EC3E80028856D /* 项目构建过程 */,
 				919A48A2228DB0C0009436D9 /* Culture_Programmer */,
 				919A48A1228DB0C0009436D9 /* Products */,
@@ -104,6 +106,14 @@
 				912B427C22F9CD4B003A0D1D /* ffiFunction.c */,
 			);
 			path = Culture_Programmer;
+			sourceTree = "<group>";
+		};
+		91E818792327B97300BFDDD4 /* shell脚本 */ = {
+			isa = PBXGroup;
+			children = (
+				91E8187A2327B99200BFDDD4 /* test.bash */,
+			);
+			path = "shell脚本";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
