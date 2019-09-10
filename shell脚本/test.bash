@@ -35,7 +35,7 @@ done
 #只读变量
 rdVar="这是只读变量"
 readonly rdVar
-rdVar="改变这个只读变量"
+#rdVar="改变这个只读变量"
 echo ${rdVar}
 
 #删除变量，删除后，下面无法再次使用
@@ -157,6 +157,79 @@ EOF
 
 if [[ $a -lt 100 || $b -gt 10 ]]; then
 	echo "逻辑运算 成功"
+fi
+
+#字符串运算符
+:<<EOF
+判断两个字符串相等[ $a = $b ]
+判断两个字符串不等[ $a != $b ]
+判断字符串长度是否为0[ -z $a ]
+判断字符串长度是否不为0[ -n $a ]
+判断字符串是否为空[ $a ]
+EOF
+
+if [ $a = $b ]; then
+	echo "hello。。。"
+fi
+
+#文件测试运算符
+:<<EOF
+检测文件是否是目录[ -d $file ]
+检测文件是否是可读[ -r $file ]
+检测文件是否是可写[ -w $file ]
+检测文件是否是可执行[ -x $file ]
+检测文件是否为空[ -s $file ]
+检测文件是否存在[ -e $file ]
+
+EOF
+
+#--------------第五课：echo命令---------
+echo "hello  world!! \c" #\c不换行
+echo "hello  world!! \n" 
+echo "输出定向到文件中" > myfile
+echo `date`
+
+#--------------第六课：printf命令---------
+#printf  format-string  [arguments...]
+printf "%-10s %-8s %-4s\n" 姓名 性别 体重kg  
+printf "%-10s %-8s %-4.2f\n" 郭靖 男 66.1234 
+printf "%-10s %-8s %-4.2f\n" 杨过 男 48.6543 
+printf "%-10s %-8s %-4.2f\n" 郭芙 女 47.9876
+
+:<<EOF
+%s %c %d %f都是格式替代符
+%-10s 指一个宽度为10个字符（-表示左对齐，没有则表示右对齐），
+任何字符都会被显示在10个字符宽的字符内，如果不足则自动以空格填充，超过也会将内容全部显示出来。
+%-4.2f 指格式化为小数，其中.2指保留2位小数。
+EOF
+
+#printf "这是一个警告 \a"
+
+#--------------第七课：test命令---------
+#Shell中的test命令用于检查某个条件是否成立，它可以进行数值、字符和文件三个方面的测试。
+num1=100
+num2=200
+if test $num1 -eq $num2 
+then
+	printf "两个数相等\n"
+else
+	printf "两个数不相等\n"
+fi
+
+str1="abc"
+str2="def"
+if test $str1 = $str2
+then
+	printf "字符串相等 \n"
+else
+	printf "字符串不相等 \n"
+fi
+
+if test -e ./myfile
+then
+	echo "文件存在"
+else
+	echo "文件不存在"
 fi
 
 
