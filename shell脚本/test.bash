@@ -233,3 +233,42 @@ else
 fi
 
 
+#--------------第八课：流程控制---------
+#if
+if condition1
+then
+    command1
+elif condition2 
+then 
+    command2
+else
+    commandN
+fi
+
+#forin
+for var in item1 item2 ... itemN
+do
+    command1
+    command2
+    ...
+    commandN
+done
+
+#while
+while condition
+do
+    command
+done
+
+
+
+
+
+
+
+
+
+
+
+
+
