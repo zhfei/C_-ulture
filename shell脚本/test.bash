@@ -235,35 +235,60 @@ fi
 
 #--------------第八课：流程控制---------
 #if
-if condition1
+if 0
 then
-    command1
-elif condition2 
+    echo "1"
+elif 0 
 then 
-    command2
+    echo "2"
 else
-    commandN
+    echo "3"
 fi
 
 #forin
-for var in item1 item2 ... itemN
+for var in item1 item2 itemN
 do
-    command1
-    command2
-    ...
-    commandN
+    echo $var
 done
 
 #while
-while condition
+while false
 do
-    command
+    echo "while 循环"
 done
 
+#键盘输入
+echo "按下<CTRL - D>退出"
+echo -n "输入你喜欢的名称："
+while read FILM
+do
+	echo "输入了名字：$FILM"
+done
 
+#until 直到条件为true时才停止
+until true 
+do
+	echo "条件为true时停止"
+done
 
+#case
+echo "输入1到4之间的数字："
+read aNum
+case $aNum in
+	1)
+	 echo "模式1"
+		;;
+	2|3)
+	echo "模式2/模式3"
 
-
+	4)
+ 	 echo "模式2"
+	    ;;
+	 *)
+	 echo "游戏结束..."
+	 break
+	 ;;
+esac
 
 
 
