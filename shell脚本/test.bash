@@ -339,6 +339,19 @@ command > /dev/null
 注意：0 是标准输入（STDIN），1 是标准输出（STDOUT），2 是标准错误输出（STDERR）。
 EOF
 
+#shell文件包含
+:<<EOF
+Shell 文件包含的语法格式如下：
+
+. filename   #注意点号(.)和文件名中间有一空格
+如：（. ./test1.sh）
+
+或
+source filename
+如：（source ./test1.sh）
+
+EOF
+
 
 
 
