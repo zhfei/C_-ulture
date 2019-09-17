@@ -258,6 +258,7 @@ do
 done
 
 #键盘输入
+:<<EOF
 echo "按下<CTRL - D>退出"
 echo -n "输入你喜欢的名称："
 while read FILM
@@ -270,8 +271,10 @@ until true
 do
 	echo "条件为true时停止"
 done
+EOF
 
 #case
+:<<EOF
 echo "输入1到4之间的数字："
 read aNum
 case $aNum in
@@ -289,6 +292,67 @@ case $aNum in
 	 break
 	 ;;
 esac
+EOF
+
+#函数
+:<<EOF
+function funcName() {
+	echo "这是第一个shell函数"
+}
+
+funcWithReturn() {
+	echo "计算两个数相加运算"
+	echo "第一个数字："
+	read num1
+	echo "第二个数字："
+	read num2
+	echo "两个数分别为${num1} 和 ${num2}"
+	return  $((${num1} + ${num2}))
+}
+
+funcWithReturn
+echo "这两个数的和为：$? !"
+EOF
+
+#函数参数
+:<<EOF
+funWithParam() {
+	echo "第一个参数 $1 "
+	echo "第二个参数 $2 "
+	echo "所有的参数 $* !"
+}
+
+funWithParam 1 2
+EOF
+
+#Shell输入/输出重定向
+:<<EOF
+command > file  将输出重定向到file
+command < file  将输入重定向到file
+command >> file  将输出依追加的方式重定向到file
+n >& m          将输出文件m 和 n合并
+n <& m          将输入文件m 和 n合并
+
+/dev/null 是一个特殊的文件，如果输出重定向到/dev/null，则表示丢弃输出
+command > /dev/null
+
+注意：0 是标准输入（STDIN），1 是标准输出（STDOUT），2 是标准错误输出（STDERR）。
+EOF
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
